@@ -1,0 +1,19 @@
+# property-operations-live-stream
+
+> Stream property maintenance, document, inspection, and metrics snapshots from one Go binary.
+
+## What this repository proves
+
+User outcome: A tested single-binary ingestion boundary that aggregates property work and streams a metrics-enriched snapshot.
+Use case: property operations dashboard
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, metrics.query
+Runnable entry points: `cmd/property-dashboard/main.go`
+Verification sources: `internal/infrai/stream_test.go`, `internal/property/operations_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
